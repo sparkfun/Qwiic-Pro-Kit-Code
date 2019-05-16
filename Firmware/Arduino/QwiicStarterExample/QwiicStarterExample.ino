@@ -6,7 +6,7 @@
   License: This code is public domain but you buy me a burger if you use this 
   and we meet someday (Beefware License).
 
-  This sketch shows how Qwuiicly you can make a Pong-like game
+  This sketch shows how Qwiic-ly you can make a Pong-like game
   All parts (Redboard , Mini OLED Display, Proximity Sensor, Acceleromenter, 
   and Qwiic Joystick) are  included in the Qwiic Starter Kit (available: 
   https://www.sparkfun.com/products/15349).  The Joystick has different firmware 
