@@ -27,7 +27,7 @@ Documentation
   * **[Qwiic Accelerometer (MMA8452Q)](https://learn.sparkfun.com/tutorials/qwiic-accelerometer-mma8452q-hookup-guide)**
   * **[Qwiic Micro OLED](https://learn.sparkfun.com/tutorials/qwiic-micro-oled-hookup-guide)**
   * **[Qwiic Joystick](https://learn.sparkfun.com/tutorials/qwiic-joystick-hookup-guide)**
-* **[Project Guide](https://learn.sparkfun.com/tutorials/qwiic-starter-kit-project-guide)** - Project guide using the Qwiic accelerometer, micro OLED, Qwiic joystick, and RedBoard Turbo.
+* **[Project Guide](https://learn.sparkfun.com/tutorials/qwiic-starter-kit-project-guide)** - Project guide using the Qwiic accelerometer, micro OLED, Qwiic joystick, and RedBoard Turbo to play pong.
 
 License Information
 -------------------
