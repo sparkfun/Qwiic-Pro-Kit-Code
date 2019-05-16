@@ -23,10 +23,11 @@ Documentation
   * **[SparkFun Micro OLED](https://github.com/sparkfun/SparkFun_Micro_OLED_Arduino_Library)**
   * **[SparkFun Qwiic Joystick](https://github.com/sparkfun/SparkFun_Qwiic_Joystick_Arduino_Library)**
 * **Hookup Guides**
+  * **[RedBoard Turbo](https://learn.sparkfun.com/tutorials/redboard-turbo-hookup-guide)**
   * **[Qwiic Accelerometer (MMA8452Q)](https://learn.sparkfun.com/tutorials/qwiic-accelerometer-mma8452q-hookup-guide)**
   * **[Qwiic Micro OLED](https://learn.sparkfun.com/tutorials/qwiic-micro-oled-hookup-guide)**
   * **[Qwiic Joystick](https://learn.sparkfun.com/tutorials/qwiic-joystick-hookup-guide)**
-* **[Project Guide](https://learn.sparkfun.com/tutorials/experiment-guide-for-redbot-with-shadow-chassis)** - Experiment guide for the RedBot.
+* **[Project Guide](https://learn.sparkfun.com/tutorials/qwiic-starter-kit-project-guide)** - Project guide using the Qwiic accelerometer, micro OLED, Qwiic joystick, and RedBoard Turbo.
 
 License Information
 -------------------
