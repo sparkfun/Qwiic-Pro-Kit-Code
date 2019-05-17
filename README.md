@@ -2,17 +2,16 @@ Qwiic Starter Kit Code
 ========================================
 
 
-![SparkFun Part Name](URL for picture of part)
+[![Qwiic Starter Kit ](URL for picture of part)](https://www.sparkfun.com/products/15349)
 
-[*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
+[*Qwiic Starter Kit (KIT-15349)*](https://www.sparkfun.com/products/15349)
 
 Example code using parts from the Qwiic Starter Kit.
-
 
 Repository Contents
 -------------------
 
-* **/Firmware** - Arduino example code.
+* **/Firmware** - Arduino example code to play micro Pong!
 
 Documentation
 --------------
