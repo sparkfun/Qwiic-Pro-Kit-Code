@@ -6,13 +6,13 @@ Qwiic Starter Kit Code
 
 [*SparkFun Part Name (SKU)*](URL for product on Sparkfun.com)
 
-Example code using parts from the Qwiic Starter Kit
+Example code using parts from the Qwiic Starter Kit.
 
 
 Repository Contents
 -------------------
 
-* **/Firmware** - Example code 
+* **/Firmware** - Arduino example code.
 
 Documentation
 --------------
@@ -23,10 +23,11 @@ Documentation
   * **[SparkFun Micro OLED](https://github.com/sparkfun/SparkFun_Micro_OLED_Arduino_Library)**
   * **[SparkFun Qwiic Joystick](https://github.com/sparkfun/SparkFun_Qwiic_Joystick_Arduino_Library)**
 * **Hookup Guides**
-  * **[RedBoard Turbo](https://learn.sparkfun.com/tutorials/redboard-turbo-hookup-guide)**
-  * **[Qwiic Accelerometer (MMA8452Q)](https://learn.sparkfun.com/tutorials/qwiic-accelerometer-mma8452q-hookup-guide)**
-  * **[Qwiic Micro OLED](https://learn.sparkfun.com/tutorials/qwiic-micro-oled-hookup-guide)**
+  * **[RedBoard Turbo (SAMD21) Development Board](https://learn.sparkfun.com/tutorials/redboard-turbo-hookup-guide)**
   * **[Qwiic Joystick](https://learn.sparkfun.com/tutorials/qwiic-joystick-hookup-guide)**
+  * **[Qwiic Accelerometer (MMA8452Q)](https://learn.sparkfun.com/tutorials/qwiic-accelerometer-mma8452q-hookup-guide)**
+  * **[Qwiic Proximity Sensor (VCNL4040)](https://learn.sparkfun.com/tutorials/qwiic-proximity-sensor-vcnl4040-hookup-guide)**
+  * **[Qwiic Micro OLED](https://learn.sparkfun.com/tutorials/qwiic-micro-oled-hookup-guide)** 
 * **[Project Guide](https://learn.sparkfun.com/tutorials/qwiic-starter-kit-project-guide)** - Project guide using the Qwiic accelerometer, micro OLED, Qwiic joystick, and RedBoard Turbo to play pong.
 
 License Information
