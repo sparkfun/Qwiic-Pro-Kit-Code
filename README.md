@@ -23,7 +23,6 @@ Documentation
   * **[SparkFun Qwiic Accelerometer (MMA8452Q)](https://github.com/sparkfun/SparkFun_MMA8452Q_Arduino_Library)**
   * **[SparkFun Qwiic Proximity Sensor (VCNL4040)](https://github.com/sparkfun/SparkFun_VCNL4040_Arduino_Library)**
   * **[SparkFun Micro OLED](https://github.com/sparkfun/SparkFun_Micro_OLED_Arduino_Library)**
-
 * **Hookup Guides**
   * **[RedBoard Turbo (SAMD21) Development Board](https://learn.sparkfun.com/tutorials/redboard-turbo-hookup-guide)**
   * **[Qwiic Joystick](https://learn.sparkfun.com/tutorials/qwiic-joystick-hookup-guide)**
