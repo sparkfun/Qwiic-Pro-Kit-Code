@@ -7,7 +7,7 @@
   and we meet someday (Beefware License).
 
   This sketch shows how Qwiic-ly you can make a Pong-like game
-  All parts (Redboard , Mini OLED Display, Proximity Sensor, Acceleromenter, 
+  All parts (RedBoard , Mini OLED Display, Proximity Sensor, Acceleromenter, 
   and Qwiic Joystick) are  included in the Qwiic Starter Kit (available: 
   https://www.sparkfun.com/products/15349).  The Joystick has different firmware 
   than the SparkX version of the joystick which requires different code.
@@ -15,13 +15,13 @@
   Wiring:
   The hardware setup is incredibly simple thanks to the magic of I2C! All you
   have to do is connect all the parts to one another with the Qwiic cables and
-  make sure that they are connected to the Redboard. The order in which the
+  make sure that they are connected to the RedBoard. The order in which the
   parts are all strung together doesn't matter!
 
   Playing the Game:
   Make sure the libraries for the OLED, the Joystick, Accelerometer (MMA8452Q), and 
   Proximity sensor (VCNL4040) are installed (see links below), then compile and upload the 
-  code to the Redboard. You'll notice in the loop funtion that P1 (player 1) and P2 (player 2) 
+  code to the RedBoard. You'll notice in the loop funtion that P1 (player 1) and P2 (player 2) 
   are controlled by update Paddle functions.  Select which board and which function you 
   want to control each paddle, you will also need to comment out any boards that are not
   being used in the startBoards function.  Then move the corresponding board to control 
@@ -34,7 +34,7 @@
 #include <SparkFun_MMA8452Q.h>                        // Include the SFE_MMA8452Q library                                     http://librarymanager/All#Sparkfun_MMA8452Q
 #include <SparkFun_Qwiic_Joystick_Arduino_Library.h>  // Include the SFE_Qwiic Joystick library                               http://librarymanager/All#SparkFun_joystick
 #include <SparkFun_VCNL4040_Arduino_Library.h>        // Include the VCNL4040 Library                                         http://librarymanager/All#SparkFun_VCNL4040
-//#define Serial SerialUSB                            // Uncomment for Redboard Turbo, this reroutes all Serial commands to SerialUSB
+#define Serial SerialUSB                            // Uncomment for RedBoard Turbo, this reroutes all Serial commands to SerialUSB
 
 //////////////////////////
 // MicroOLED Definition //
