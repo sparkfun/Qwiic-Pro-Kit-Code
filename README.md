@@ -2,7 +2,7 @@ Qwiic Starter Kit Code
 ========================================
 
 
-[![Qwiic Starter Kit ](URL for picture of part)](https://www.sparkfun.com/products/15349)
+[![Qwiic Starter Kit ](https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/9/0/3/Qwiic_Starter_Kit_Daisy_Chained_I2C.jpg)](https://www.sparkfun.com/products/15349)
 
 [*Qwiic Starter Kit (KIT-15349)*](https://www.sparkfun.com/products/15349)
 
