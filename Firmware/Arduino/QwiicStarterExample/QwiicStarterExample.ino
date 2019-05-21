@@ -3,13 +3,13 @@
   Michelle Shorter @ SparkFun
   Thanks for Code from Owen Lyke @ SparkX, Wes Furuya, and Nathan Seidle @SparkFun
   May 13th 2019
-  License: This code is public domain but you buy me a burger if you use this 
+  License: This code is public domain but you buy me a burger if you use this
   and we meet someday (Beefware License).
 
   This sketch shows how Qwiic-ly you can make a Pong-like game
-  All parts (RedBoard , Mini OLED Display, Proximity Sensor, Acceleromenter, 
-  and Qwiic Joystick) are  included in the Qwiic Starter Kit (available: 
-  https://www.sparkfun.com/products/15349).  The Joystick has different firmware 
+  All parts (RedBoard , Mini OLED Display, Proximity Sensor, Acceleromenter,
+  and Qwiic Joystick) are  included in the Qwiic Starter Kit (available:
+  https://www.sparkfun.com/products/15349).  The Joystick has different firmware
   than the SparkX version of the joystick which requires different code.
 
   Wiring:
@@ -19,13 +19,13 @@
   parts are all strung together doesn't matter!
 
   Playing the Game:
-  Make sure the libraries for the OLED, the Joystick, Accelerometer (MMA8452Q), and 
-  Proximity sensor (VCNL4040) are installed (see links below), then compile and upload the 
-  code to the RedBoard. You'll notice in the loop funtion that P1 (player 1) and P2 (player 2) 
-  are controlled by update Paddle functions.  Select which board and which function you 
+  Make sure the libraries for the OLED, the Joystick, Accelerometer (MMA8452Q), and
+  Proximity sensor (VCNL4040) are installed (see links below), then compile and upload the
+  code to the RedBoard. You'll notice in the loop funtion that P1 (player 1) and P2 (player 2)
+  are controlled by update Paddle functions.  Select which board and which function you
   want to control each paddle, you will also need to comment out any boards that are not
-  being used in the startBoards function.  Then move the corresponding board to control 
-  each player. The game does not end, you just keep racking up points (the display does 
+  being used in the startBoards function.  Then move the corresponding board to control
+  each player. The game does not end, you just keep racking up points (the display does
   not look great once you hit 100).
 ****************************************************************************************/
 
@@ -41,12 +41,12 @@
 //////////////////////////
 #define PIN_RESET 9                     // The library assumes a reset pin is necessary. The Qwiic OLED has RST hard-wired, so pick an arbitrarty IO pin that is not being used
 #define DC_JUMPER 1                     // Out-of-the-box the OLED's address jumper is open so use (1). If the jumper is closed then use 0 here
-MicroOLED oled(PIN_RESET, DC_JUMPER);   
+MicroOLED oled(PIN_RESET, DC_JUMPER);
 
 //////////////////////////////
 // Accelerometer Definition //
 //////////////////////////////
-MMA8452Q accel;                         
+MMA8452Q accel;
 int X = 0;        //X acceleration - in gs
 int Y = 0;        //Y acceleration - in gs
 int Z = 0;        //Z acceleration - in gs
@@ -74,13 +74,13 @@ unsigned int score2 = 0;         //Score for Player 2
 
 //Playing field - instead of having these calculated all the time, they are available for anyone to use
 #define borderSpace 2            //space between edge of screen and paddles
-const int oledWidth=64;          //int oledWidth = oled.getLCDWidth();      //If you use a different screen you can run this to check the width and height
-const int oledHeight=48;         //int oledHeight = oled.getLCDHeight();    //If you use a different screen you can run this to check the width and height
+const int oledWidth = 64;        //int oledWidth = oled.getLCDWidth();      //If you use a different screen you can run this to check the width and height
+const int oledHeight = 48;       //int oledHeight = oled.getLCDHeight();    //If you use a different screen you can run this to check the width and height
 const int middleX = oledWidth / 2;
 const int middleY = oledHeight / 2;
-//boolean invertOLED  = true;    //can uncomment to reverse the display 
+//boolean invertOLED  = true;    //can uncomment to reverse the display
 
-// Ball 
+// Ball
 int ballX = oledWidth / 2;       // initial X position of the ball
 int ballY = oledHeight / 2;      // initial Y position of the ball
 #define ballR 2                  // Ball Radius
@@ -109,7 +109,8 @@ void setup() { //Start serial, and all boards, setup a random seed, clear the di
   //display Intro Text, etc.
   //oled.clear(PAGE);
   //printText("Qwiic", 1000);
-}//setup
+}//end setup
+
 void loop() { //draw everything, get new values for the paddles, move the ball and determine whether a score has occured, repeat
   //display current settings
   oled.clear(PAGE);
@@ -121,19 +122,20 @@ void loop() { //draw everything, get new values for the paddles, move the ball a
   //Update Paddles (these functions read from the sensors before updating paddle information)
   //The code does try to initialize all 3 inputs and will hang if one is not connected.  To fix
   //comment out the appropriate section in the 'startBoards' function
-  
+
   //P1 = updatePaddleJoystick();       //uses the Y axis
   P1 = updatePaddleAccelerometer();    //uses the X axis
   //P1 = updatePaddleProximity();      //Will allow you to go off screen if you get too close, range is about 1-3"
 
   //P2 = updatePaddleJoystick();       //uses the Y axis
-  //P2 = updatePaddleAccelerometer();  //uses the X 
+  //P2 = updatePaddleAccelerometer();  //uses the X
   P2 = updatePaddleProximity();        //Will allow you to go off screen if you get too close, range is about 1-3"
 
 
   //move the ball (does not display, just changes values)
   moveBall();
 }
+
 void setBall() { //set up the ball near the center of the field and start moving in a random direction/speed
   ballYVelocity = random(-2, 3);
   ballXVelocity = random(-2, 3);
@@ -144,6 +146,7 @@ void setBall() { //set up the ball near the center of the field and start moving
   ballX += random(-5, 5); //close to middle, but offset enough to give more variety in where it actually hits
   ballY += random(-5, 5); //close to middle, but offset enough to give more variety in where it actually hits
 }
+
 void startBoards() { //runs Wire.begin, and starts all boards. If not using a board you will need to comment out that section
   Wire.begin();
   bool error = false;
@@ -166,13 +169,22 @@ void startBoards() { //runs Wire.begin, and starts all boards. If not using a bo
   }
 
   //start proximity sensor (comment out if not using proximity sensor)
-    if (proximity.begin() == false) {
+  if (proximity.begin() == false) {
     Serial.println("Proximity sensor not responding, ");
     error = true;
   }
-  
-  if (error == true) while (1); //if there is an error, then hang
+
+  if (error == true) {
+    oled.clear(ALL);
+    oled.setCursor(0, 0);
+    oled.print("Error, missing a Qwiic board! Check your connections & code!");
+    oled.display();
+  }
+  while (error == true) {
+    //if there is an error, then hang
+  }
 }
+
 void printText(String text, int time) { //A quick way to display text in the middle of the screen, This does run display
   oled.setFontType(0);
   // Try to set the cursor in the middle of the screen
@@ -185,49 +197,58 @@ void printText(String text, int time) { //A quick way to display text in the mid
 void drawField() { //just draws the field (a line around the screen), does not run display
   oled.rect(0, 0, oled.getLCDWidth() , oled.getLCDHeight());
 }
+
 void drawPaddles() {//just adds the paddles to the buffer, does not run display
   //oled.rectFill(X,Y,W,H);
   oled.rectFill(borderSpace, P1, PaddleWidth, PaddleHeight);
   oled.rectFill(oled.getLCDWidth() - borderSpace - PaddleWidth, P2, PaddleWidth, PaddleHeight);
 }
+
 void drawBall() { //just adds a ball to the buffer at the correct corrdinates, does not run display
   oled.circleFill(ballX, ballY, ballR);
 }
+
 void readJoystick() { //updates global variables for the joystick
   H = joystick.getHorizontal();
   V = joystick.getVertical();
   B = joystick.getButton();
 }
+
 void readAccel() { //updates global variables for the accelerometer
   X = (int)(accel.getCalculatedX() * 1000); //makes this more usable as it is not an int from -1000 to 1000 (when using it as a tilt sensor with only gravity affecting it)
-  Y=accel.getCalculatedY();
-  Z=accel.getCalculatedZ();
+  Y = accel.getCalculatedY();
+  Z = accel.getCalculatedZ();
 }
+
 void readProx() { //updates globlal variable for the proximity sensor
   //There are other things this sensor can read such as ambient light that could be added
   prox = proximity.getProximity();
   //Serial.println(prox); //Useful for seeing values to adjust range
 }
+
 int updatePaddleJoystick() { //sends back value to be assigned to either P1 or P2
   readJoystick();
   int temp = map(V, 0, 1023, borderSpace, oledHeight - PaddleHeight - borderSpace);
   //Serial.print("Joystick V: "); Serial.println(temp);
   return temp;
 }
+
 int updatePaddleAccelerometer() { //sends back value to be assigned to either P1 or P2
   readAccel();
   int temp = map(X, -1000, 1000, borderSpace, oledHeight - PaddleHeight - borderSpace);
   //Serial.print("Accelerometer X: "); Serial.println(temp);
   return temp;
 }
+
 int updatePaddleProximity() { //sends back value to be assigned to either P1 or P2
   readProx();
   int temp = map(prox, 2, 4000, borderSpace, oledHeight - PaddleHeight - borderSpace);
   //Serial.print("Proximity: "); Serial.println(temp);
   return temp;
 }
+
 void moveBall() {  //This is where most of the work is done.  The ball is moved which means it must check score conditions and reset the ball as well.
-  
+
   if (ballX - ballR > 1 && ballX + ballR < (oledWidth - 2) && ballY - ballR > 1 && ballY + ballR < (oledHeight - 2) ) //ball has not gone off the left side, right side, bottom, top
   {
     //move ball on its current course
@@ -280,6 +301,7 @@ void moveBall() {  //This is where most of the work is done.  The ball is moved 
   //Good general information for debug
   //Serial.print("XV: "); Serial.print(ballXVelocity); Serial.print("  YV: "); Serial.print(ballYVelocity); Serial.print("    BallX: "); Serial.print(ballX); Serial.print("  BallY: "); Serial.println(ballY);
 }
+
 void displayScore() { //prints the score
   oled.clear(PAGE);
   oled.setFontType(1);
@@ -288,4 +310,3 @@ void displayScore() { //prints the score
   oled.display();
   delay(1500);
 }
-
