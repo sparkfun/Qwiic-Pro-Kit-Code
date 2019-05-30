@@ -1,12 +1,12 @@
-Qwiic Starter Kit Code
+Qwiic Pro Kit Code
 ========================================
 
 
-[![Qwiic Starter Kit ](https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/9/0/3/Qwiic_Starter_Kit_Daisy_Chained_I2C.jpg)](https://www.sparkfun.com/products/15349)
+[![Qwiic Pro Kit ](https://cdn.sparkfun.com/r/600-600/assets/learn_tutorials/9/0/3/Qwiic_Starter_Kit_Daisy_Chained_I2C.jpg)](https://www.sparkfun.com/products/15349)
 
-[*Qwiic Starter Kit (KIT-15349)*](https://www.sparkfun.com/products/15349)
+[*Qwiic Pro Kit (KIT-15349)*](https://www.sparkfun.com/products/15349)
 
-Example code using parts from the Qwiic Starter Kit.
+Example code using parts from the Qwiic Pro Kit.
 
 Repository Contents
 -------------------
